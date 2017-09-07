@@ -3,7 +3,7 @@ project(jpegturbo)
 find_package(qibuild)
 
 include_directories( "." "inc" )
-add_definitions( -DWITH_SIMD )
+add_definitions( -DWITH_SIMD -msse3)
 
 add_subdirectory(simd)
 set_source_files_properties(${SIMD_OBJS} PROPERTIES GENERATED 1)
